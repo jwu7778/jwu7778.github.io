@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <hl>File upload</h1>
+    <%= typeof msg != 'undefined' ? msg : '' %>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="file-field input-field">
+      <div class="btn grey">
+        <span>File</span>
+        <input type="file" name="myImage" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+      
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>  
+  <br>
+  <img src="<%= typeof file != 'undefined' ? file:' '%>" class="img-responsive">
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+</body>
+
+</html>
